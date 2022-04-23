@@ -1,8 +1,10 @@
-Julia apologized _____ being late. (for, because)
-Sarah is laughing. She _____ be very happy. (must, may)
-They _____ a better dinner, if they had eaten in a restaurant. (would have had, would have)
-He promised not _____ him. (harmed, to harm)
-This shirt is made of cotton, _____ is a very cheap and common material. (what, which)
-"She is having a hard time." He said she _____. (was having a hard time, had a hard time)
-Sarah was doing the chores. The chores _____ done by Sarah. (had been, were being)
-Do you like _____ Hungarian food? I do. (-, the)
+Julia apologized _____ being late. (for, because);for
+Sarah is laughing. She _____ be very happy. (must, may);must
+They _____ a better dinner, if they had eaten in a restaurant. (would have had, would have);would have had
+He promised not _____ him. (harmed, to harm);to harm
+This shirt is made of cotton, _____ is a very cheap and common material. (what, which);which
+"She is having a hard time." He said she _____. (was having a hard time, had a hard time);was having a hard time
+Sarah was doing the chores. The chores _____ done by Sarah. (had been, were being);were being
+Do you like _____ Hungarian food? I do. (-, the);-
+I have always ______. play games well. (been able to, could);been able to
+He has always ______ to do what he wanted. (could, been allowed);been allowed

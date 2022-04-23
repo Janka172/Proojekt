@@ -140,7 +140,7 @@ if igen=='2':
             meg=input("Szeretnél még szavakat gyakorolni? [i/n] ")
         if meg=="i":
             melyik=int(input("\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? "))
-else:
+elif igen=='1':
     egesz=[]
     mon=[]
 
@@ -152,7 +152,7 @@ else:
         mon.append(obj)
         sor=sor.replace(';','')
         egesz.append(sor)
-
+    mondathoz.close()
 
     print('Ebben a játékban szétszedtunk 4db-ra egy mondatod és megcseréltük a szavait. A szavakat fogod látni a képernyőn. írd be a helyes mondatot')
     osszerakpontok=0
@@ -184,5 +184,29 @@ else:
         if a<10: return 'Vannak gondok....'
 
     print('A játék végére {} pontod lett. {}'.format(osszerakpontok,mennyirejo(osszerakpontok)))
+elif igen=='3':
+    class kiegmondat():
+        def __init__(self, mondat, mego):
+            self.mondat=mondat
+            self.mego=mego
 
-print('My cat ____ on the tree (ül)')
+    f=open('fajlok/mondat.txt','r', encoding='utf-8')
+
+    monli=[]
+
+    for sor in f:
+        sor=sor.replace('\n','')
+        d=sor.split(';')
+        obj=kiegmondat(d[0],d[1])
+        monli.append(obj)
+
+    kiegpont=0
+
+    for k in monli:
+        print(k.mondat)
+        ver=input('Mi hiányozhat? ')
+        if ver==k.mego:
+            print('A megoldásod jó.')
+            kiegpont+=1
+        else: print('Nem jó a válasz. A helyes megoldás: {}'.format(k.mego))
+    f.close
