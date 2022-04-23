@@ -259,3 +259,8 @@ elif nem=='2':
                 else:
                     print("A válasz hibás, a helyes válasz: ",elem.valasz)
             print("Pontjaid: {}/5".format(pont))
+        ujra=input("Szeretnél még szavakat gyakorolni? [i/n] ")
+        while ujra!="i" and ujra!="n":
+            ujra=input("Szeretnél még szavakat gyakorolni? [i/n] ")
+        if ujra=="i":
+            melyik=input("VÁLASZTÓS IZÉ HELYE")
