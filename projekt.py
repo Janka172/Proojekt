@@ -27,6 +27,18 @@ class mondat():
         self.harmadik=harmadik
         self.negyedik=negyedik
 
+a="""
+██████╗░██████╗░░█████╗░░░░░░██╗███████╗██╗░░██╗████████╗
+██╔══██╗██╔══██╗██╔══██╗░░░░░██║██╔════╝██║░██╔╝╚══██╔══╝
+██████╔╝██████╔╝██║░░██║░░░░░██║█████╗░░█████═╝░░░░██║░░░
+██╔═══╝░██╔══██╗██║░░██║██╗░░██║██╔══╝░░██╔═██╗░░░░██║░░░
+██║░░░░░██║░░██║╚█████╔╝╚█████╔╝███████╗██║░╚██╗░░░██║░░░
+╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
+""" 
+print(a)
+
+
+
 ujra='i'
 while ujra=="i":
     nem=input('Angolul [1] akarsz tanulni vagy a Tehenekről [2]: ')
@@ -220,6 +232,7 @@ while ujra=="i":
                 self.kerdes=kerdes
                 self.valasz=valasz
         te=172
+        teszt='kecske'
         while te>2 or te<0:
             te=int(input("Elolvasod az oktató anyagot[1] vagy kitöltesz róla egy tesztet[2]?"))
         if te==1:
@@ -236,27 +249,28 @@ while ujra=="i":
             print("\tHíres tehenek:")
             for elem in L:
                 print("- ",elem.hires)
-        elif te==2:
-            L=[]
-            f=open("fajlok/teszt.txt","r",encoding="utf-8")
-            for sor in f:
-                sor=sor.replace("\n","")
-                d=sor.split(";")
-                obj=tehenteszt(d[0],d[1])
-                L.append(obj)
-            f.close
-            pont=0
-            for elem in L:
-                valasz=input("{}\n\t".format(elem.kerdes))
-                valasz.lower()
-                if valasz==elem.valasz:
-                    print("A válasz helyes.")
-                    pont+=1
-                else:
-                    print("A válasz hibás, a helyes válasz: ",elem.valasz)
-            print("Pontjaid: {}/5".format(pont))
-    ujra=input("Szeretnél még gyakorolni? [i/n] ")
+            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+
+            if teszt=='i':
+                L=[]
+                f=open("fajlok/teszt.txt","r",encoding="utf-8")
+                for sor in f:
+                    sor=sor.replace("\n","")
+                    d=sor.split(";")
+                    obj=tehenteszt(d[0],d[1])
+                    L.append(obj)
+                f.close
+                pont=0
+                for elem in L:
+                    valasz=input("{}\n\t".format(elem.kerdes))
+                    valasz.lower()
+                    if valasz==elem.valasz:
+                        print("A válasz helyes.")
+                        pont+=1
+                    else:
+                        print("A válasz hibás, a helyes válasz: ",elem.valasz)
+                print("Pontjaid: {}/5".format(pont))
+        elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
+    ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
-        ujra=input("Szeretnél még gyakorolni? [i/n] ")
-    if ujra=="i":
-        melyik=input("Angolul [1] akarsz tanulni vagy a Tehenekről [2]: ")
+        ujra=input("Visszamész a menübe? [i/n] ")
