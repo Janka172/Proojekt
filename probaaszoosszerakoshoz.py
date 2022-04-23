@@ -69,7 +69,7 @@ for sor in mondathoz:
     egesz.append(sor)
 
 
-print('Ebben a játékban szétszedtunk 4db-ra egy mondatod és megcsréltük a szavait. A szavakat fogod látni a képernyőn. írd be a helyes mondatot')
+print('Ebben a játékban szétszedtunk 4db-ra egy mondatod és megcseréltük a szavait. A szavakat fogod látni a képernyőn. írd be a helyes mondatot')
 osszerakpontok=0
 
 fel=1
@@ -95,8 +95,8 @@ for x in range(len(mon)):
 
 def mennyirejo(a):
     if a>20: return 'Nagyon ügyes voltál'
-    if a<20: return 'Egy kicsi gyakorlással még jobban fog menni'
+    if a>10 and a<20: return 'Egy kicsi gyakorlással még jobban fog menni'
     if a<10: return 'Vannak gondok....'
 
 
-print('E játék végére {} pontod lett, {}'.format(osszerakpontok,mennyirejo(osszerakpontok)))
+print('A játék végére {} pontod lett, {}'.format(osszerakpontok,mennyirejo(osszerakpontok)))
