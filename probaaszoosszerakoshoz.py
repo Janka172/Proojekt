@@ -24,4 +24,3 @@ for k in monli:
     else: print('Nem jó a válasz. A helyes megoldás: {}'.format(k.mego))
 f.close
 
-    
