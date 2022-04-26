@@ -281,7 +281,7 @@ while ujra=="i":
                                 pont+=1
                             else:
                                 print("A válasz hibás, a helyes válasz: ",elem.valasz)
-                        print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
+                        print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                 elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
             if allat==2:
                 igen2=int(input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? "))
@@ -359,117 +359,212 @@ while ujra=="i":
                             print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                     elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
                 if igen2==2:
-                    igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
-                    while igen3>2 or igen3<0:
+                    igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t\n"))
+                    while igen5>3 or igen5<0:
+                        igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t\n"))
+                    if igen5==1:
                         igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
-                    if igen3==1:
-                        igen4=int(input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t"))
-                        while igen4>3 or igen4<0:
+                        while igen3>2 or igen3<0:
+                            igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
+                        if igen3==1:
                             igen4=int(input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t"))
-                        if igen4==1:
-                            class kincsem:
-                                def __init__(self,cim,szoveg,kerdes,valasz):
-                                    self.cim=cim
-                                    self.szoveg=szoveg
-                                    self.kerdes=kerdes
-                                    self.valasz=valasz
-                            L=[]
-                            f=open("fajlok/lovak/overdose.txt","r",encoding="utf-8")
-                            for sor in f:
-                                sor=sor.replace("\n","")
-                                d=sor.split(";")
-                                obj=kincsem(d[0],d[1],d[2],d[3])
-                                L.append(obj)
-                            f.close
-                            for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
-                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
-                            if teszt=='i':
-                                pont=0
+                            while igen4>3 or igen4<0:
+                                igen4=int(input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t"))
+                            if igen4==1:
+                                class kincsem:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/overdose.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=kincsem(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
                                 for elem in L:
-                                    valasz=input("{}\t".format(elem.kerdes))
-                                    valasz.lower()
-                                    if valasz==elem.valasz:
-                                        print("A válasz helyes.")
-                                        pont+=1
-                                    else:
-                                        print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-                        if igen4==2:
-                            class overdose:
-                                def __init__(self,cim,szoveg,kerdes,valasz):
-                                    self.cim=cim
-                                    self.szoveg=szoveg
-                                    self.kerdes=kerdes
-                                    self.valasz=valasz
-                            L=[]
-                            f=open("fajlok/lovak/overdose.txt","r",encoding="utf-8")
-                            for sor in f:
-                                sor=sor.replace("\n","")
-                                d=sor.split(";")
-                                obj=overdose(d[0],d[1],d[2],d[3])
-                                L.append(obj)
-                            f.close
-                            for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
-                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
-                            if teszt=='i':
-                                pont=0
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+                            if igen4==2:
+                                class overdose:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/overdose.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=overdose(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
                                 for elem in L:
-                                    valasz=input("{}\t".format(elem.kerdes))
-                                    valasz.lower()
-                                    if valasz==elem.valasz:
-                                        print("A válasz helyes.")
-                                        pont+=1
-                                    else:
-                                        print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                        if igen4==3:
-                            class imperial:
-                                def __init__(self,cim,szoveg,kerdes,valasz):
-                                    self.cim=cim
-                                    self.szoveg=szoveg
-                                    self.kerdes=kerdes
-                                    self.valasz=valasz
-                            L=[]
-                            f=open("fajlok/lovak/imperial.txt","r",encoding="utf-8")
-                            for sor in f:
-                                sor=sor.replace("\n","")
-                                d=sor.split(";")
-                                obj=imperial(d[0],d[1],d[2],d[3])
-                                L.append(obj)
-                            f.close
-                            for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
-                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
-                            if teszt=='i':
-                                pont=0
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                            if igen4==3:
+                                class imperial:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/imperial.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=imperial(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
                                 for elem in L:
-                                    valasz=input("{}\t".format(elem.kerdes))
-                                    valasz.lower()
-                                    if valasz==elem.valasz:
-                                        print("A válasz helyes.")
-                                        pont+=1
-                                    else:
-                                        print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-                    if igen3==2:
-                        igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
-                        while igen4>3 or igen4<0:
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+                        if igen3==2:
                             igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
+                            while igen4>3 or igen4<0:
+                                igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
+                            if igen4==1:
+                                class sodashi:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/sodashi.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=sodashi(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
+                                for elem in L:
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                            if igen4==2:
+                                class secretariat:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/secretariat.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=secretariat(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
+                                for elem in L:
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                            if igen4==3:
+                                class ruffian:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/ruffian.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=ruffian(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
+                                for elem in L:
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+                    if igen5==2:
+                        igen4=int(input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t"))
+                        while igen4>3 or igen4<0:
+                            igen4=int(input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t"))
                         if igen4==1:
-                            class sodashi:
+                            class Totilas:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
                                     self.szoveg=szoveg
                                     self.kerdes=kerdes
                                     self.valasz=valasz
                             L=[]
-                            f=open("fajlok/lovak/sodashi.txt","r",encoding="utf-8")
+                            f=open("fajlok/lovak/totilas.txt","r",encoding="utf-8")
                             for sor in f:
                                 sor=sor.replace("\n","")
                                 d=sor.split(";")
-                                obj=sodashi(d[0],d[1],d[2],d[3])
+                                obj=Totilas(d[0],d[1],d[2],d[3])
                                 L.append(obj)
                             f.close
                             for elem in L:
@@ -485,20 +580,20 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                                print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
                         if igen4==2:
-                            class secretariat:
+                            class Donnerhall:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
                                     self.szoveg=szoveg
                                     self.kerdes=kerdes
                                     self.valasz=valasz
                             L=[]
-                            f=open("fajlok/lovak/secretariat.txt","r",encoding="utf-8")
+                            f=open("fajlok/lovak/donnerhall.txt","r",encoding="utf-8")
                             for sor in f:
                                 sor=sor.replace("\n","")
                                 d=sor.split(";")
-                                obj=secretariat(d[0],d[1],d[2],d[3])
+                                obj=Donnerhall(d[0],d[1],d[2],d[3])
                                 L.append(obj)
                             f.close
                             for elem in L:
@@ -514,20 +609,97 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                                print("\nPontjaid: {}/2, {}".format(pont,mennyirejo(pont)))
                         if igen4==3:
-                            class ruffian:
+                            class Bonfire:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
                                     self.szoveg=szoveg
                                     self.kerdes=kerdes
                                     self.valasz=valasz
                             L=[]
-                            f=open("fajlok/lovak/ruffian.txt","r",encoding="utf-8")
+                            f=open("fajlok/lovak/bonifire.txt","r",encoding="utf-8")
                             for sor in f:
                                 sor=sor.replace("\n","")
                                 d=sor.split(";")
-                                obj=ruffian(d[0],d[1],d[2],d[3])
+                                obj=Bonfire(d[0],d[1],d[2],d[3])
+                                L.append(obj)
+                            f.close
+                            for elem in L:
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                            class Bonfireeredmeny:
+                                def __init__(self,szoveg):
+                                    self.szoveg=szoveg
+                            L2=[]
+                            f=open("fajlok/lovak/bonfireeredmeny.txt","r",encoding="utf-8")
+                            for sor in f:
+                                sor=sor.replace("\n","")
+                                d=sor.split(";")
+                                obj=Bonfireeredmeny(d[0])
+                                L2.append(obj)
+                            f.close
+                            print("\n\tVersenyeredményei: ")
+                            for elem in L2:
+                                print("- {}".format(elem.szoveg))
+
+                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            if teszt=='i':
+                                pont=0
+                                for elem in L:
+                                    valasz=input("{}\t".format(elem.kerdes))
+                                    valasz.lower()
+                                    if valasz==elem.valasz:
+                                        print("A válasz helyes.")
+                                        pont+=1
+                                    else:
+                                        print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                print("\nPontjaid: {}/2, {}".format(pont,mennyirejo(pont)))
+                    if igen5==3:
+                        igen4=int(input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t"))
+                        while igen4>3 or igen4<0:
+                            igen4=int(input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t"))
+                        if igen4==1:
+                                class Quidam:
+                                    def __init__(self,cim,szoveg,kerdes,valasz):
+                                        self.cim=cim
+                                        self.szoveg=szoveg
+                                        self.kerdes=kerdes
+                                        self.valasz=valasz
+                                L=[]
+                                f=open("fajlok/lovak/quidam.txt","r",encoding="utf-8")
+                                for sor in f:
+                                    sor=sor.replace("\n","")
+                                    d=sor.split(";")
+                                    obj=Quidam(d[0],d[1],d[2],d[3])
+                                    L.append(obj)
+                                f.close
+                                for elem in L:
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                if teszt=='i':
+                                    pont=0
+                                    for elem in L:
+                                        valasz=input("{}\t".format(elem.kerdes))
+                                        valasz.lower()
+                                        if valasz==elem.valasz:
+                                            print("A válasz helyes.")
+                                            pont+=1
+                                        else:
+                                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                    print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                        if igen4==2:
+                            class Pillangó:
+                                def __init__(self,cim,szoveg,kerdes,valasz):
+                                    self.cim=cim
+                                    self.szoveg=szoveg
+                                    self.kerdes=kerdes
+                                    self.valasz=valasz
+                            L=[]
+                            f=open("fajlok/lovak/pillangó.txt","r",encoding="utf-8")
+                            for sor in f:
+                                sor=sor.replace("\n","")
+                                d=sor.split(";")
+                                obj=Pillangó(d[0],d[1],d[2],d[3])
                                 L.append(obj)
                             f.close
                             for elem in L:
@@ -543,7 +715,37 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+                                print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
+                        if igen4==3:
+                            class Weinzauber:
+                                def __init__(self,cim,szoveg,kerdes,valasz):
+                                    self.cim=cim
+                                    self.szoveg=szoveg
+                                    self.kerdes=kerdes
+                                    self.valasz=valasz
+                            L=[]
+                            f=open("fajlok/lovak/weinzauber.txt","r",encoding="utf-8")
+                            for sor in f:
+                                sor=sor.replace("\n","")
+                                d=sor.split(";")
+                                obj=Weinzauber(d[0],d[1],d[2],d[3])
+                                L.append(obj)
+                            f.close
+                            for elem in L:
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            if teszt=='i':
+                                pont=0
+                                for elem in L:
+                                    valasz=input("{}\t".format(elem.kerdes))
+                                    valasz.lower()
+                                    if valasz==elem.valasz:
+                                        print("A válasz helyes.")
+                                        pont+=1
+                                    else:
+                                        print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                                print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
+
 
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
