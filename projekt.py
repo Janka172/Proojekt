@@ -20,12 +20,16 @@ class allatszo:
     def __init__(self,magyar,angol):
         self.magyar=magyar
         self.angol=angol
-class mondat():
+class mondat:
     def __init__(self,elso,masodik,harmadik,negyedik):
         self.elso=elso
         self.masodik=masodik
         self.harmadik=harmadik
         self.negyedik=negyedik
+def mennyirejo(a):
+                if a>3: return 'Nagyon ügyes voltál'
+                if a==2: return 'Egy kicsi gyakorlással még jobban fog menni'
+                if a<1: return 'Vannak gondok....'
 
 a="""
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗██╗░░██╗████████╗
@@ -253,8 +257,8 @@ while ujra=="i":
                         L.append(obj)
                     f.close
                     for elem in L:
-                        print("\t{}\n{}".format(elem.cim,elem.szoveg))
-                    print("\tHíres tehenek:")
+                        print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                    print("\n\tHíres tehenek:")
                     for elem in L:
                         print("- ",elem.hires)
                     teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
@@ -277,7 +281,7 @@ while ujra=="i":
                                 pont+=1
                             else:
                                 print("A válasz hibás, a helyes válasz: ",elem.valasz)
-                        print("Pontjaid: {}/5".format(pont))
+                        print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                 elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
             if allat==2:
                 igen2=int(input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? "))
@@ -315,7 +319,7 @@ while ujra=="i":
                         for elem in L:
                             darab+=1
                             if darab==1:
-                                print("\t\t{}".format(elem.cim))
+                                print("\n\t\t{}".format(elem.cim))
                                 for elem in L:
                                     print("\t{}\n{}".format(elem.altipus,elem.tipusszoveg))
                                 print("\n\tHasznosítási típusok")
@@ -352,7 +356,7 @@ while ujra=="i":
                                     pont+=1
                                 else:
                                     print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                            print("Pontjaid: {}/5".format(pont))
+                            print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                     elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
                 if igen2==2:
                     igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
@@ -378,7 +382,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -390,7 +394,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4".format(pont))
+                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
                         if igen4==2:
                             class overdose:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
@@ -407,7 +411,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -419,7 +423,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3".format(pont))
+                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
                         if igen4==3:
                             class imperial:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
@@ -436,7 +440,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -448,7 +452,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4".format(pont))
+                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
                     if igen3==2:
                         igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
                         while igen4>3 or igen4<0:
@@ -469,7 +473,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -481,7 +485,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3".format(pont))
+                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
                         if igen4==2:
                             class secretariat:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
@@ -498,7 +502,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -510,7 +514,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/3".format(pont))
+                                print("Pontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
                         if igen4==3:
                             class ruffian:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
@@ -527,7 +531,7 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -539,7 +543,7 @@ while ujra=="i":
                                         pont+=1
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
-                                print("Pontjaid: {}/4".format(pont))
+                                print("Pontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
 
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
