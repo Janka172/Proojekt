@@ -27,7 +27,7 @@ class mondat:
         self.harmadik=harmadik
         self.negyedik=negyedik
 def mennyirejo(a):
-                if a>3: return 'Nagyon ügyes voltál'
+                if a>=3: return 'Nagyon ügyes voltál'
                 if a==2: return 'Egy kicsi gyakorlással még jobban fog menni'
                 if a<1: return 'Vannak gondok....'
 
