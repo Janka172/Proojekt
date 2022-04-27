@@ -41,6 +41,10 @@ a="""
 """ 
 print(a)
 
+print('Bevezető a programhoz.\n A következőkben a program használatáról fogtok tanulni.\nAmikor kiválasztjátok az oktatóanyag elolvasását, nem az egész szöveg jelenik majd meg. Látni fogsz egy [TOVÁBB] feliratot, ilyenkor megkell nyomnod majd az [ENTER]-t, ez fogja felhozni a többi szövegrészt.\nMost pedig gyakoroljuk.')
+
+eleje=input('')
+
 
 
 ujra='i'
