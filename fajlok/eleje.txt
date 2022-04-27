@@ -1,0 +1,3 @@
+Ez a szöveg legelső része.
+Ez pedig a második.
+Most a harmadik, látod? Sokkalta egyszerűbb és jobban átláthatobb is.

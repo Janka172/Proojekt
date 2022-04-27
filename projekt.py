@@ -43,7 +43,20 @@ print(a)
 
 print('Bevezető a programhoz.\n A következőkben a program használatáról fogtok tanulni.\nAmikor kiválasztjátok az oktatóanyag elolvasását, nem az egész szöveg jelenik majd meg. Látni fogsz egy [TOVÁBB] feliratot, ilyenkor megkell nyomnod majd az [ENTER]-t, ez fogja felhozni a többi szövegrészt.\nMost pedig gyakoroljuk.')
 
-eleje=input('')
+f=open('fajlok/eleje.txt','r',encoding='utf-8')
+
+
+
+
+for sor in f:
+    sor=sor.replace('\n','')
+    print(sor)
+    eleje=input('[TOVÁBB]')
+    while eleje!='':
+        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+        eleje=input('[NYomd meg az ENTERT]')
+
+
 
 
 
