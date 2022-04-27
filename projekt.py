@@ -58,8 +58,6 @@ for sor in f:
 
 
 
-
-
 ujra='i'
 while ujra=="i":
     nem=input('Angolul [1] akarsz tanulni vagy az állatokról [2]: ')
@@ -762,8 +760,98 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
-
-
+        if tipus==2:
+            igen6=int(input("Melyik állatfaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
+            while igen6<1 or igen6>3:
+                igen6=int(input("Melyik állatfaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
+            if igen6==1:
+                class vizilo:
+                    def __init__(self,cim,szoveg,kerdes,valasz):
+                        self.cim=cim
+                        self.szoveg=szoveg
+                        self.kerdes=kerdes
+                        self.valasz=valasz
+                L=[]
+                f=open("fajlok/vizilo.txt","r",encoding="utf-8")
+                for sor in f:
+                    sor=sor.replace("\n","")
+                    d=sor.split(";")
+                    obj=vizilo(d[0],d[1],d[2],d[3])
+                    L.append(obj)
+                    f.close
+                for elem in L:
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                if teszt=='i':
+                    pont=0
+                    for elem in L:
+                        valasz=input("\n{}\t".format(elem.kerdes))
+                        valasz.lower()
+                        if valasz==elem.valasz:
+                            print("A válasz helyes.")
+                            pont+=1
+                        else:
+                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+            if igen6==2:
+                class gnu:
+                    def __init__(self,cim,szoveg,kerdes,valasz):
+                        self.cim=cim
+                        self.szoveg=szoveg
+                        self.kerdes=kerdes
+                        self.valasz=valasz
+                L=[]
+                f=open("fajlok/gnu.txt","r",encoding="utf-8")
+                for sor in f:
+                    sor=sor.replace("\n","")
+                    d=sor.split(";")
+                    obj=gnu(d[0],d[1],d[2],d[3])
+                    L.append(obj)
+                    f.close
+                for elem in L:
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                if teszt=='i':
+                    pont=0
+                    for elem in L:
+                        valasz=input("\n{}\t".format(elem.kerdes))
+                        valasz.lower()
+                        if valasz==elem.valasz:
+                            print("A válasz helyes.")
+                            pont+=1
+                        else:
+                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
+            if igen6==3:
+                class gombhal:
+                    def __init__(self,cim,szoveg,kerdes,valasz):
+                        self.cim=cim
+                        self.szoveg=szoveg
+                        self.kerdes=kerdes
+                        self.valasz=valasz
+                L=[]
+                f=open("fajlok/gombhal.txt","r",encoding="utf-8")
+                for sor in f:
+                    sor=sor.replace("\n","")
+                    d=sor.split(";")
+                    obj=gombhal(d[0],d[1],d[2],d[3])
+                    L.append(obj)
+                    f.close
+                for elem in L:
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                if teszt=='i':
+                    pont=0
+                    for elem in L:
+                        valasz=input("\n{}\t".format(elem.kerdes))
+                        valasz.lower()
+                        if valasz==elem.valasz:
+                            print("A válasz helyes.")
+                            pont+=1
+                        else:
+                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
         ujra=input("Visszamész a menübe? [i/n] ")
+
