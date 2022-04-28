@@ -275,6 +275,10 @@ while ujra=="i":
                     f.close
                     for elem in L:
                         print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                        eleje=input('[TOVÁBB]')
+                        while eleje!='':
+                            print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                            eleje=input('[NYomd meg az ENTERT]')
                     print("\n\tHíres tehenek:")
                     for elem in L:
                         print("- ",elem.hires)
@@ -403,7 +407,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -432,7 +440,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -461,7 +473,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -494,7 +510,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -523,7 +543,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -552,7 +576,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -585,7 +613,11 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                eleje=input('[TOVÁBB]')
+                                while eleje!='':
+                                    print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                    eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -614,7 +646,11 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                eleje=input('[TOVÁBB]')
+                                while eleje!='':
+                                    print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                    eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -643,7 +679,11 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                eleje=input('[TOVÁBB]')
+                                while eleje!='':
+                                    print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                    eleje=input('[NYomd meg az ENTERT]')
                             class Bonfireeredmeny:
                                 def __init__(self,szoveg):
                                     self.szoveg=szoveg
@@ -691,7 +731,11 @@ while ujra=="i":
                                     L.append(obj)
                                 f.close
                                 for elem in L:
-                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                    eleje=input('[TOVÁBB]')
+                                    while eleje!='':
+                                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                        eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
@@ -720,7 +764,11 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                eleje=input('[TOVÁBB]')
+                                while eleje!='':
+                                    print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                    eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
@@ -749,7 +797,11 @@ while ujra=="i":
                                 L.append(obj)
                             f.close
                             for elem in L:
-                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                                print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                                eleje=input('[TOVÁBB]')
+                                while eleje!='':
+                                    print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                                    eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
