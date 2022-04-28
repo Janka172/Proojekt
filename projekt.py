@@ -57,8 +57,7 @@ for sor in f:
         eleje=input('[NYomd meg az ENTERT]')
 
 
-
-
+#Gyilkosok
 
 ujra='i'
 while ujra=="i":
