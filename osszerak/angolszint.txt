@@ -1,7 +1,50 @@
-___ English?;She is;He;Is;Is she;Is she
-This is an office, and ____ tables.;those are;these;that are;that is
-This is ___ girlfriend.;hers;of her;to him;his
-There are ___ people in the office.;the;a;some;any
-___ money on Maria's table?;There is some;Is it some;There is any;Is there any
-"Where's Maria?" "She ____ in the office.";is sitting;sit;sitting;sits
-Maria … Italian and English.;speak;speaks;speaking;is speak
+___ English?;She is;He;Is;Is she;4
+This is an office, and ____ tables.;those are;these;that are;that is;1
+This is ___ girlfriend.;hers;of her;to him;his;4
+There are ___ people in the office.;the;a;some;any;3
+___ money on Maria's table?;There is some;Is it some;There is any;Is there any;4
+"Where's Maria?" "She ____ in the office.";is sitting;sit;sitting;sits;1
+Maria … Italian and English.;speak;speaks;speaking;is speak;2
+"What ____ ?" "She's writing a letter.";does she do;is she doing;does she;she is doing;2
+She ____ speak French.;no;not;doesn't;don't;3
+We ____ happy.;are;have;have got;was;1
+My friends ____ very nice.;are;come from;our;live;1
+Why aren’t they listening to ____ ?;our;ours;we;us;4
+Please, don’t take this book, it’s ____ .;their;mine;my;of Tom;2
+Ann ____ at 6.30 every morning.;is getting;get up;gets up;getting up;3
+„What does your father do?” „He is ____ " .;a teacher;fine;in the garden;working at home;1
+What ____ in 1918?;had happened;has happened;did happen;happened;4
+I have to go to the shops because there ____ bread at home.;is any;isn’t some;isn’t;is no;4
+Ann ____ her husband twenty years ago.;has met;was meeting;met;had met;3
+It’s easy ____ mistakes when you work.;to make;make;making;makes;1
+My brother, who is an MBA student, ____ to the university on Sundays.;didn’t go;never goes;is not going;never go;2
+„Mother, ____ about me, I’m fine.”;don’t worry;not worry;not worrying;not to worry;1
+Dear Frank, I would like ____ you for your last letter.;thank;to thank;thanks;thanking;2
+. Susan ____ when she was five.;must read and write;could read and write;can read and write;will read and write;2
+Who is ____ man in the world?;the richest;the rich;a richer;the richer;1
+Where ____ football on Sundays?;Peter plays;Peter play;does Peter play;is Peter playing;3
+The boys are very quiet. What ____ in their room?;they do;are they doing;do they do;they are doing;2
+When I ____ a child, I ate a lot of ice-cream.;am;was;have been;had been;2
+„ ____ a cheese sandwich?” „It’s 50 p.”;What costs;How much costs;What is;How much is;4
+„ ____ Mr Crime’s latest novel?” „Not yet.”;Are you reading;Do you read;Did you read;Have you read;4
+Is London ____ Rome?;bigger than;as big;bigger then;big as;1
+Are you interested ____ music?;for;to;in;at;3
+I always have breakfast ____ on Sundays.;in the bed;on the bed;in bed;on a bed;3
+The butler was ____ person the inspector suspected.;the last;least;last;the least;1
+I’ve just read the latest book ____ by this famous friend of yours.;having written;writing;wrote;written;4
+If he had had his helmet on, he ____ injured so badly;wouldn’t have;wouldn’t have been;hadn’t been;wouldn’t be;2
+John was caught by the police, but Tom managed to ____ .;give up;hold up;get away;go off;3
+You’d better ____ me up when you come in early in the morning.;not to wake;not wake;don’t wake;didn’t wake;2
+He is chocaholic, he eats ____ chocolate all the time.;nothing but;all but;nothing else;anything only;1
+Could I suggest just ____ in tonight instead of going out into the pouring rain?;to stay;staying;stay;stayed;2
+My friend didn’t manage to pass his exam, the tasks were ____ for him to solve.;difficult enough;more difficult;too difficult;enough difficult;3
+I wish I ____ black hair, I look much older than I am.;wouldn’t have;hadn’t had;didn’t have;shouldn’t have;3
+“Mary, listen! ____ yesterday?”;Who do you think did I meet;Who do you think I met;What do you think who I met;What do you think who did I meet;3
+Last night I heard my son ____ up on the stairs.;tiptoed;was tiptoeing;tiptoeing;to tiptoe;3
+You’ll surely change your mind when you ____ the situation for yourself.;have seen;will see;saw;’ll have seen;1
+It’s time ____ much harder for your exam, you have only two more weeks to go.;learning;to learn;learn;you learnt;4
+It wasn’t John you saw yesterday, you ____ mistaken him for somebody else.;had;would have;should have;must have;4
+My friend’d rather I ____ so much when he watches the news.;didn’t speak;don’t speak;shouldn’t speak;not speak;1
+I’m sorry, she is not at home. She ____ the doctor about her flu.;has just seen;had just seen;is just seeing;just saw;3
+I’m mad with her, she ____ so late!;never comes;has always come;always comes;is always coming;4
+My glass is almost empty! Who ____ my beer?;had drunk;has been drinking;was drinking;has drunk;2
