@@ -22,5 +22,5 @@ szint=input('Szeretnéd felmérni a nyelvi színtedet angolból? [i/n]')
 if szint=='i':
     while me>=51 or me<=16:
         me=int(input('Hány kérdéses tesztet szeretnél? [legkisebb 15, legnagyobb 50]'))
+    for x in range(me):
         
-    
