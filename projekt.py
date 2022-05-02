@@ -989,3 +989,4 @@ while ujra=="i":
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
         ujra=input("Visszamész a menübe? [i/n] ")
+ 
