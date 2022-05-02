@@ -246,9 +246,9 @@ while ujra=="i":
         while tipus<1 or tipus>2:
             tipus=int(input("Melyik állat típusról szeretnél tanulni?\n\t1: Háziállat\n\t2: Vadállat\n\t"))
         if tipus==1:
-            allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t"))
-            while allat<1 or allat>2:
-                allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t"))
+            allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t"))
+            while allat<1 or allat>3:
+                allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t"))
             if allat==1:
                 class tehen:
                     def __init__(self,cim,szoveg,hires):
@@ -984,7 +984,83 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
+            if allat==3:
+                class kecske:
+                    def __init__(self,cim,szoveg,kerdes,valasz):
+                        self.cim=cim
+                        self.szoveg=szoveg
+                        self.kerdes=kerdes
+                        self.valasz=valasz
+                L=[]
+                f=open("fajlok/kecske.txt","r",encoding="utf-8")
+                for sor in f:
+                    sor=sor.replace("\n","")
+                    d=sor.split(";")
+                    obj=kecske(d[0],d[1],d[2],d[3])
+                    L.append(obj)
+                f.close
+                a="""
+                                  ████        ████                                              
+                                ▓▓▒▒██      ██▒▒██                                              
+                            ██▒▒██    ██▓▓▒▒██                                                
+                            ██▒▒██    ██▒▒▒▒██                                                  
+                            ██▒▒██    ██▒▒▒▒██                                                  
+                            ██▒▒██    ██▒▒▒▒██                                                  
+                            ██▒▒██    ██▒▒▒▒██                                                  
+                            ██████████████████                                                  
+                    ██████              ░░░░██                                                
+                    ██  ██                    ████                                              
+                ██  ░░██                        ██                                            
+                ██░░░░██                      ██░░  ██                                          
+                ██████                ░░    ████░░░░██                                        
+                    ██                    ░░  ██  ████                                          
+                    ██      ██    ██          ██                                      ████      
+                    ██      ██    ██          ██                                    ██    ██    
+                    ██                          ██                                    ██    ██  
+                ██              ░░░░    ░░░░    ██████                              ██    ██  
+                ██            ░░░░░░░░░░░░░░░░░░      ████████  ░░        ██████████    ██    
+                ██                  ░░░░▒▒██    ░░    ░░  ░░░░██████▓▓████  ░░        ██      
+                ██          ░░░░░░░░░░▒▒▒▒██░░░░░░░░░░░░  ░░░░  ░░  ░░░░░░░░░░░░        ██    
+                ██                  ░░██▒▒  ██░░                                        ██    
+                ██    ▒▒░░▒▒▒▒      ██        ██                                          ██  
+                    ██    ▒▒▒▒        ██        ██░░                                        ██  
+                    ██            ██          ██░░                                        ██  
+                        ██        ██            ██░░░░                                      ██  
+                        ██████████              ██░░░░                                    ██  
+                            ██░░░░██                ██░░░░░░                                ██  
+                            ██░░██                  ████░░░░░░      ░░░░░░░░░░░░░░░░░░      ██  
+                            ██                    ██░░██████░░  ░░░░██████████████░░░░    ██  
+                                                    ██░░██▓▓  ██  ░░██        ██░░░░██░░░░  ██  
+                                                    ██░░██▓▓  ██  ░░██        ██░░░░░░██░░░░  ██
+                                                    ██░░██▓▓  ██  ░░██          ██░░░░████░░  ██
+                                                    ██░░██▓▓  ██  ░░██            ██░░██  ██  ██
+                                                    ██░░██▓▓  ██  ░░██            ██░░██  ██  ██
+                                                    ██░░██▓▓  ██  ░░██            ██░░██  ██░░██
+                                                    ██████▓▓  ████████            ██████  ██████
+                                                    ██▒▒██▓▓  ██▒▒▒▒██            ██▒▒██  ██▒▒██
+                                                                                                
+                                    ░░      ░░    ░░                ░░░░                        
 
+                """ 
+                print(a)
+                for elem in L:
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                    eleje=input('[TOVÁBB]')
+                    while eleje!='':
+                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                        eleje=input('[NYomd meg az ENTERT]')
+                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                if teszt=='i':
+                    pont=0
+                    for elem in L:
+                        valasz=input("{}\t".format(elem.kerdes))
+                        valasz.lower()
+                        if valasz==elem.valasz:
+                            print("A válasz helyes.")
+                            pont+=1
+                        else:
+                            print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
+                    print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
 
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
