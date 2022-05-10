@@ -771,6 +771,7 @@ while ujra=="i":
                         self.szoveg=szoveg
                         self.kerdes=kerdes
                         self.valasz=valasz
+                        
                 L=[]
                 f=open("fajlok/vizilo.txt","r",encoding="utf-8")
                 for sor in f:
