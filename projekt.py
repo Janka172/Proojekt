@@ -61,7 +61,7 @@ for sor in f:
 
 ujra='i'
 while ujra=="i":
-    nem=input('Angolul [1] akarsz tanulni vagy az állatokról [2]: ')
+    nem=input('Miről akarsz tanulni?\n\t1: Angolul\n\t2: Állatokról\n\t3: Gyilkosok')
     if nem=='1':
         igen=input('Melyik feladattípussal akarsz gyakorolni?\n\t1: Mondatösszerakás\n\t2: Szavak\n\t3: Mondatkiegészítés\n\t')
         if igen=='2':
