@@ -1,6 +1,7 @@
-Hány gyilkosságot kell elkövetnie valakinek, hogy sorozatgyilkosnak számítson?[2,3];3
-Melyik nem jellemző a sorozatgyilkosok gyerekkorára?[gyújtogatás,önvagdosás];önvagdosás
-Mi irányítja azokat a sorozatgyilkosokat, akiket a halucinációk motiválnak?[más emberek,fejében lévő hangok];fejében lévő hangok
-Mi ellen irányulnak a küldetés orientált gyilkosok támadásai?[kissebb embercsoportok,közeli ismerősök];kissebb embercsoportok
-Ezek közül melyik izgalom orientált gyilkos?[Zodiákus,Dahmer];Zodiákus
-A vágy orientált gy
+Hány gyilkosságot kell elkövetnie valakinek, hogy sorozatgyilkosnak számítson? [2,3];3
+Melyik nem jellemző a sorozatgyilkosok gyerekkorára? [gyújtogatás,önvagdosás];önvagdosás
+Mennyi az átlag életkoruk? [29,623];29
+Mi irányítja azokat a sorozatgyilkosokat, akiket a halucinációk motiválnak? [más emberek,fejében lévő hangok];fejében lévő hangok
+Mi ellen irányulnak a küldetés orientált gyilkosok támadásai? [kissebb embercsoportok,közeli ismerősök];kissebb embercsoportok
+Ezek közül melyik izgalom orientált gyilkos? [Zodiákus,Dahmer];Zodiákus
+Miért ölnek a vágy orientált gyilkosok?[izgalom,düh];izgalom
