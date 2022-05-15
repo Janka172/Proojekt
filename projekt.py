@@ -40,8 +40,13 @@ a="""
 ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░
 """ 
 print(a)
+c='''
+┌───── •✧✧• ─────┐
+      TOVÁBB 
+└───── •✧✧• ─────┘
+'''
 
-print('Bevezető a programhoz.\n A következőkben a program használatáról fogtok tanulni.\nAmikor kiválasztjátok az oktatóanyag elolvasását, nem az egész szöveg jelenik majd meg. Látni fogsz egy [TOVÁBB] feliratot, ilyenkor megkell nyomnod majd az [ENTER]-t, ez fogja felhozni a többi szövegrészt.\nMost pedig gyakoroljuk.')
+print('Bevezető a programhoz.\n A következőkben a program használatáról fogtok tanulni.\nAmikor kiválasztjátok az oktatóanyag elolvasását, nem az egész szöveg jelenik majd meg. Látni fogsz egy {} feliratot, ilyenkor megkell nyomnod majd az [ENTER]-t, ez fogja felhozni a többi szövegrészt.\nMost pedig gyakoroljuk.'.format(c))
 
 f=open('fajlok/eleje.txt','r',encoding='utf-8')
 
@@ -51,7 +56,7 @@ f=open('fajlok/eleje.txt','r',encoding='utf-8')
 for sor in f:
     sor=sor.replace('\n','')
     print(sor)
-    eleje=input('[TOVÁBB]')
+    eleje=input(c)
     while eleje!='':
         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
         eleje=input('[NYomd meg az ENTERT]')
@@ -298,7 +303,7 @@ while ujra=="i":
                     print(a)
                     for elem in L:
                         print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                        eleje=input('[TOVÁBB]')
+                        eleje=input(c)
                         while eleje!='':
                             print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                             eleje=input('[NYomd meg az ENTERT]')
@@ -489,7 +494,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -522,7 +527,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -555,7 +560,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -592,7 +597,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -625,7 +630,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -658,7 +663,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -740,7 +745,7 @@ while ujra=="i":
                             f.close
                             for elem in L:
                                 print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                eleje=input('[TOVÁBB]')
+                                eleje=input(c)
                                 while eleje!='':
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
@@ -773,7 +778,7 @@ while ujra=="i":
                             f.close
                             for elem in L:
                                 print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                eleje=input('[TOVÁBB]')
+                                eleje=input(c)
                                 while eleje!='':
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
@@ -806,7 +811,7 @@ while ujra=="i":
                             f.close
                             for elem in L:
                                 print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                eleje=input('[TOVÁBB]')
+                                eleje=input(c)
                                 while eleje!='':
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
@@ -899,7 +904,7 @@ while ujra=="i":
                                 f.close
                                 for elem in L:
                                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                    eleje=input('[TOVÁBB]')
+                                    eleje=input(c)
                                     while eleje!='':
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
@@ -932,7 +937,7 @@ while ujra=="i":
                             f.close
                             for elem in L:
                                 print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                eleje=input('[TOVÁBB]')
+                                eleje=input(c)
                                 while eleje!='':
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
@@ -965,7 +970,7 @@ while ujra=="i":
                             f.close
                             for elem in L:
                                 print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                                eleje=input('[TOVÁBB]')
+                                eleje=input(c)
                                 while eleje!='':
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
@@ -1041,7 +1046,7 @@ while ujra=="i":
                 print(a)
                 for elem in L:
                     print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
-                    eleje=input('[TOVÁBB]')
+                    eleje=input(c)
                     while eleje!='':
                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                         eleje=input('[NYomd meg az ENTERT]')
@@ -1199,7 +1204,7 @@ while ujra=="i":
 
         for elem in gyilo1:
             print("\n\t{}\n{}".format(elem.cim,elem.tobbi))
-            eleje=input('[TOVÁBB]')
+            eleje=input(c)
             while eleje!='':
                 print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                 eleje=input('[Nyomd meg az ENTERT]')
@@ -1219,7 +1224,7 @@ while ujra=="i":
         if teszt=='tovább':
             for elem in gyilo2:
                 print("\n\t{}\n{}\n\t{}".format(elem.ciim,elem.szoveg,elem.elkov))
-                eleje=input('[TOVÁBB]')
+                eleje=input(c)
                 while eleje!='':
                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                     eleje=input('[Nyomd meg az ENTERT]')
@@ -1238,3 +1243,24 @@ while ujra=="i":
     ujra=input("Visszamész a menübe? [i/n] ")
     while ujra!="i" and ujra!="n":
         ujra=input("Visszamész a menübe? [i/n] ")
+
+a='''
+╭╮╭━╮╱╱╱╱╱╱╱╱╱╱╭╮╱╱╱╭╮╱╭╮
+┃┃┃╭╯╱╱╱╱╱╱╱╱╱╭╯╰╮╱╭╯╰┳╯╰╮
+┃╰╯╯╭━━┳━━┳━━━╋╮╭╋━┻╮╭┻╮╭╋━━┳╮
+┃╭╮┃┃┃━┫━━╋━━┃┣┫┃┃┃━┫┃╱┃┃┃┃━╋╯
+┃┃┃╰┫┃━╋━━┃┃━━┫┃╰┫┃━┫╰╮┃╰┫┃━╋╮
+╰╯╰━┻━━┻━━┻━━━┻┻━┻━━┻━╯╰━┻━━┻╯
+'''
+b='''
+
+╱╱╭╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━━╮╱╱╱╱╱╱╱╱╱╱╱╭╮╱╭╮╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╱╭╮
+╱╱┃┃╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╮━┃╱╱╱╱╱╱╱╱╱╱╭╯╰┳╯╰╮╱╱╱╱╱╱╱╱╱╱╰╮╭╮┃╱╱╱╱╱╱╱╭╯╰╮
+╱╱┃┣━━┳━╮┃┃╭┳━━╮╱╱╱╱╱╱╱╱╱╱╱╱╭╯╭╋━━┳━━┳━╮╭━┻╮╭┻╮╭╯╱╱╱╱╱╱╱╱╱╱╱┃┃┃┣━━┳━╮╭━┻╮╭╯
+╭╮┃┃╭╮┃╭╮┫╰╯┫╭╮┃╭━━┳━━┳━━╮╱╭╯╭╯┃━━┫╭╮┃╭╮┫┃━┫┃╱┃┃╱╭━━┳━━┳━━╮╱┃┃┃┃╭╮┃╭╮┫╭╮┃┃
+┃╰╯┃╭╮┃┃┃┃╭╮┫╭╮┃╰━━┻━━┻━━╯╭╯━╰━╋━━┃╭╮┃┃┃┃┃━┫╰╮┃╰╮╰━━┻━━┻━━╯╭╯╰╯┃╰╯┃┃┃┃╭╮┃╰╮
+╰━━┻╯╰┻╯╰┻╯╰┻╯╰╯╱╱╱╱╱╱╱╱╱╱╰━━━━┻━━┻╯╰┻╯╰┻━━┻━╯╰━╯╱╱╱╱╱╱╱╱╱╱╰━━━┻━━┻╯╰┻╯╰┻━╯
+'''
+
+
+print('{}\n\t{}'.format(a,b))
