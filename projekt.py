@@ -29,7 +29,7 @@ class mondat:
 def mennyirejo(a):
                 if a>=3: return 'Nagyon ügyes voltál'
                 if a==2: return 'Egy kicsi gyakorlással még jobban fog menni'
-                if a<1: return 'Vannak gondok....'
+                if a<1: return 'Vannak gondok...'
 
 a="""
 ██████╗░██████╗░░█████╗░░░░░░██╗███████╗██╗░░██╗████████╗
@@ -62,13 +62,11 @@ for sor in f:
         eleje=input('[NYomd meg az ENTERT]')
 
 
-#Gyilkosok
-
 ujra='i'
 while ujra=="i":
-    nem=input('Miről akarsz tanulni?\n\t1: Angolul\n\t2: Állatokról\n\t3: Gyilkosok')
+    nem=input('Miről akarsz tanulni?\n\t1: Angolul\n\t2: Állatokról\n\t3: Gyilkosok\n\t')
     if nem=='1':
-        igen=input('Melyik feladattípussal akarsz gyakorolni?\n\t1: Mondatösszerakás\n\t2: Szavak\n\t3: Mondatkiegészítés\n\t4: Nyelvi színtfelmérő')
+        igen=input('Melyik feladattípussal akarsz gyakorolni?\n\t1: Mondatösszerakás\n\t2: Szavak\n\t3: Mondatkiegészítés\n\t')
         if igen=='2':
             melyik=99
             while int(melyik)<1 or int(melyik)>=6:
@@ -170,7 +168,7 @@ while ujra=="i":
                     print("Pontjaid: {}/20".format(pont))
                 else:
                     while melyik!=1 or melyik!=2 or melyik!=3 or melyik!=4 or melyik!=5:
-                        melyik=input("Ez a szám nem jelül meg egy témakört sem!\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? ")
+                        melyik=input("Ez a szám nem jelöl meg egy témakört sem!\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? ")
                 meg=input("Szeretnél még szavakat gyakorolni? [i/n] ")
                 while meg!="i" and meg!="n":
                     meg=input("Szeretnél még szavakat gyakorolni? [i/n] ")
@@ -439,9 +437,9 @@ while ujra=="i":
                             print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                     elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
                 if igen2==2:
-                    igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t\n"))
+                    igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t"))
                     while igen5>3 or igen5<0:
-                        igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t\n"))
+                        igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t"))
                     if igen5==1:
                         a="""
                                                                                                       
@@ -1063,9 +1061,9 @@ while ujra=="i":
                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
         elif tipus==2:
-            igen6=int(input("Melyik állatfaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
+            igen6=int(input("Melyik állatfajól szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
             while igen6<1 or igen6>3:
-                igen6=int(input("Melyik állatfaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
+                igen6=int(input("Melyik állatjaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
             if igen6==1:
                 class vizilo:
                     def __init__(self,cim,szoveg,kerdes,valasz):
@@ -1083,7 +1081,11 @@ while ujra=="i":
                     L.append(obj)
                     f.close
                 for elem in L:
-                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                    eleje=input(c)
+                    while eleje!='':
+                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                        eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
@@ -1112,7 +1114,11 @@ while ujra=="i":
                     L.append(obj)
                     f.close
                 for elem in L:
-                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                    eleje=input(c)
+                    while eleje!='':
+                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                        eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
@@ -1141,7 +1147,11 @@ while ujra=="i":
                     L.append(obj)
                     f.close
                 for elem in L:
-                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg)) 
+                    print("\n\t{}\n{}".format(elem.cim,elem.szoveg))
+                    eleje=input(c)
+                    while eleje!='':
+                        print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
+                        eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
