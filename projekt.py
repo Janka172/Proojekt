@@ -68,14 +68,20 @@ while ujra=="i":
     if nem=='1':
         igen=input('Melyik feladattípussal akarsz gyakorolni?\n\t1: Mondatösszerakás\n\t2: Szavak\n\t3: Mondatkiegészítés\n\t')
         if igen=='2':
-            melyik=99
-            while int(melyik)<1 or int(melyik)>=6:
+            melyik=input("Melyik témakört akarod gyakorolni? ")
+            print("Írd le a megadott szavakat angolul!")
+            print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
+            while melyik!="1" and melyik!="2" and melyik!="3" and melyik!="4" and melyik!="5" and melyik=="":
                 print("Írd le a megadott szavakat angolul!")
                 print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
                 melyik=input("Melyik témakört akarod gyakorolni? ")
             meg="i"
 
             while meg=="i":
+                while melyik!="1" and melyik!="2" and melyik!="3" and melyik!="4" and melyik!="5" and melyik=="":
+                    print("Írd le a megadott szavakat angolul!")
+                    print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
+                    melyik=input("Melyik témakört akarod gyakorolni? ")
                 if melyik=="1":
                     pont=0
                     f=open("fajlok/lo.txt","r",encoding="utf-8")
@@ -247,14 +253,14 @@ while ujra=="i":
         elif igen=='4':
             pass
     elif nem=='2': 
-        tipus=int(input("Melyik állat típusról szeretnél tanulni?\n\t1: Háziállat\n\t2: Vadállat\n\t"))
-        while tipus<1 or tipus>2:
-            tipus=int(input("Melyik állat típusról szeretnél tanulni?\n\t1: Háziállat\n\t2: Vadállat\n\t"))
-        if tipus==1:
-            allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t"))
-            while allat<1 or allat>3:
-                allat=int(input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t"))
-            if allat==1:
+        tipus=input("Melyik állat típusról szeretnél tanulni?\n\t1: Háziállat\n\t2: Vadállat\n\t")
+        while tipus!="1" and tipus!="2" or tipus=="":
+            tipus=input("Melyik állat típusról szeretnél tanulni?\n\t1: Háziállat\n\t2: Vadállat\n\t")
+        if tipus=="1":
+            allat=input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t")
+            while allat!="1" and allat!="2" and allat!="3":
+                allat=input("Melyik állatról szeretnél tanulni?\n\t1: Tehén\n\t2: Ló\n\t3: Kecske\n\t")
+            if allat=="1":
                 class tehen:
                     def __init__(self,cim,szoveg,hires):
                         self.cim=cim
@@ -309,6 +315,8 @@ while ujra=="i":
                     for elem in L:
                         print("- ",elem.hires)
                     teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                    while teszt!="i" and teszt!="n":
+                        teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
 
                     if teszt=='i':
                         L=[]
@@ -330,11 +338,11 @@ while ujra=="i":
                                 print("A válasz hibás, a helyes válasz: ",elem.valasz)
                         print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                 elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
-            if allat==2:
-                igen2=int(input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? "))
-                while igen2>2 or igen2<0:
-                    igen2=int(input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? "))
-                if igen2==1:
+            if allat=="2":
+                igen2=input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? ")
+                while igen2!="1" and igen2!="2":
+                    igen2=input("Összefoglalónak akarsz tanuni a lovakról[1], vagy híres versenylovakról[2]? ")
+                if igen2=="1":
                     class lo:
                         def __init__(self,cim,altipus,tipusszoveg,hasznostip,hasznosleiras,elnevezesek,torzsfejlodes,vadlovak):
                             self.cim=cim
@@ -416,6 +424,8 @@ while ujra=="i":
                                 for elem in L:
                                     print("\t{}".format(elem.vadlovak))
                         teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                        while teszt!="i" and teszt!="n":
+                            teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                         if teszt=='i':
                             L=[]
                             f=open("fajlok/loteszt.txt","r",encoding="utf-8")
@@ -436,11 +446,11 @@ while ujra=="i":
                                     print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                             print("Pontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
                     elif te==2: print('Nem töltheted ki a tesztet ismeretek nélkül! >:(')
-                if igen2==2:
-                    igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t"))
-                    while igen5>3 or igen5<0:
-                        igen5=int(input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t"))
-                    if igen5==1:
+                if igen2=="2":
+                    igen5=input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t")
+                    while igen5!="1" and igen5!="2" and igen5!="3":
+                        igen5=input("Milyen szakágban?\n\t1: Galopp\n\t2: Díjlovaglás\n\t3: Díjugratás\n\t")
+                    if igen5=="1":
                         a="""
                                                                                                       
                                                                                 ▒▒▒▒                
@@ -468,14 +478,14 @@ while ujra=="i":
                                                     ░░          ░░                                    
                         """ 
                         print(a)
-                        igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
-                        while igen3>2 or igen3<0:
-                            igen3=int(input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? "))
-                        if igen3==1:
-                            igen4=int(input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t"))
-                            while igen4>3 or igen4<0:
-                                igen4=int(input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t"))
-                            if igen4==1:
+                        igen3=input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? ")
+                        while igen3!="1" and igen3!="2":
+                            igen3=input("Magyar[1] vagy külföldi[2] versenylóról akarsz tanulni? ")
+                        if igen3=="1":
+                            igen4=input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t")
+                            while igen4!="1" and igen4!="2" and igen4!="3":
+                                igen4=input("Melyik ló érdekel?\n\t1: Kincsem\n\t2: Overdose\n\t3: Imperiál\n\t")
+                            if igen4=="1":
                                 class kincsem:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -497,6 +507,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -508,7 +520,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-                            if igen4==2:
+                            if igen4=="2":
                                 class overdose:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -530,6 +542,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -541,7 +555,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                            if igen4==3:
+                            if igen4=="3":
                                 class imperial:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -563,6 +577,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -574,11 +590,11 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-                        if igen3==2:
-                            igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
-                            while igen4>3 or igen4<0:
-                                igen4=int(input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t"))
-                            if igen4==1:
+                        if igen3=="2":
+                            igen4=input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t")
+                            while igen4!="1" and igen4!="2" and igen4!="3":
+                                igen4=input("Melyik ló érdekel?\n\t1: Sodashi\n\t2: Secretariat\n\t3: Ruffian\n\t")
+                            if igen4=="1":
                                 class sodashi:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -600,6 +616,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -611,7 +629,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                            if igen4==2:
+                            if igen4=="2":
                                 class secretariat:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -633,6 +651,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -644,7 +664,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                            if igen4==3:
+                            if igen4=="3":
                                 class ruffian:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -666,6 +686,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -677,7 +699,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-                    if igen5==2:
+                    if igen5=="2":
                         a="""
                                                                                                                                                        
                                                                                                                     ██    ▒▒    
@@ -723,10 +745,10 @@ while ujra=="i":
                                                                                                             ░░░░░░            
                         """ 
                         print(a)
-                        igen4=int(input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t"))
-                        while igen4>3 or igen4<0:
-                            igen4=int(input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t"))
-                        if igen4==1:
+                        igen4=input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t")
+                        while igen4!="1" and igen4!="2" and igen4!="3":
+                            igen4=input("Melyik ló érdekel?\n\t1: Totilas\n\t2: Donnerhall\n\t3: Bonfire\n\t")
+                        if igen4=="1":
                             class Totilas:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
@@ -748,6 +770,8 @@ while ujra=="i":
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            while teszt!="i" and teszt!="n":
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
                                 for elem in L:
@@ -759,7 +783,7 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                        if igen4==2:
+                        if igen4=="2":
                             class Donnerhall:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
@@ -781,6 +805,8 @@ while ujra=="i":
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            while teszt!="i" and teszt!="n":
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
                                 for elem in L:
@@ -792,7 +818,7 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/2, {}".format(pont,mennyirejo(pont)))
-                        if igen4==3:
+                        if igen4=="3":
                             class Bonfire:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
@@ -829,6 +855,8 @@ while ujra=="i":
                                 print("- {}".format(elem.szoveg))
 
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            while teszt!="i" and teszt!="n":
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
                                 for elem in L:
@@ -840,7 +868,7 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/2, {}".format(pont,mennyirejo(pont)))
-                    if igen5==3:
+                    if igen5=="3":
                         a="""
                                                                                                                                                                                         
                                                                                                        ░░                                                        
@@ -882,10 +910,10 @@ while ujra=="i":
                                                                                                                                                                 
                         """ 
                         print(a)
-                        igen4=int(input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t"))
-                        while igen4>3 or igen4<0:
-                            igen4=int(input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t"))
-                        if igen4==1:
+                        igen4=input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t")
+                        while igen4!="1" and igen4!="2" and igen4!="3":
+                            igen4=input("Melyik ló érdekel?\n\t1: Quidam de Revel\n\t2: Pillangó\n\t3: Weinzauber\n\t")
+                        if igen4=="1":
                                 class Quidam:
                                     def __init__(self,cim,szoveg,kerdes,valasz):
                                         self.cim=cim
@@ -907,6 +935,8 @@ while ujra=="i":
                                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                         eleje=input('[NYomd meg az ENTERT]')
                                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                                while teszt!="i" and teszt!="n":
+                                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                                 if teszt=='i':
                                     pont=0
                                     for elem in L:
@@ -918,7 +948,7 @@ while ujra=="i":
                                         else:
                                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                     print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                        if igen4==2:
+                        if igen4=="2":
                             class Pillangó:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
@@ -940,6 +970,8 @@ while ujra=="i":
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            while teszt!="i" and teszt!="n":
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
                                 for elem in L:
@@ -951,7 +983,7 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/3, {}".format(pont,mennyirejo(pont)))
-                        if igen4==3:
+                        if igen4=="3":
                             class Weinzauber:
                                 def __init__(self,cim,szoveg,kerdes,valasz):
                                     self.cim=cim
@@ -973,6 +1005,8 @@ while ujra=="i":
                                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                                     eleje=input('[NYomd meg az ENTERT]')
                             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                            while teszt!="i" and teszt!="n":
+                                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                             if teszt=='i':
                                 pont=0
                                 for elem in L:
@@ -984,7 +1018,7 @@ while ujra=="i":
                                     else:
                                         print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                                 print("\nPontjaid: {}/5, {}".format(pont,mennyirejo(pont)))
-            if allat==3:
+            if allat=="3":
                 class kecske:
                     def __init__(self,cim,szoveg,kerdes,valasz):
                         self.cim=cim
@@ -1049,6 +1083,8 @@ while ujra=="i":
                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                         eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                while teszt!="i" and teszt!="n":
+                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
                     for elem in L:
@@ -1060,11 +1096,11 @@ while ujra=="i":
                         else:
                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-        elif tipus==2:
+        elif tipus=="2":
             igen6=int(input("Melyik állatfajól szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
-            while igen6<1 or igen6>3:
-                igen6=int(input("Melyik állatjaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
-            if igen6==1:
+            while igen6!="1" and igen6!="2" and igen6!="3":
+                igen6=input("Melyik állatjaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t")
+            if igen6=="1":
                 class vizilo:
                     def __init__(self,cim,szoveg,kerdes,valasz):
                         self.cim=cim
@@ -1087,6 +1123,8 @@ while ujra=="i":
                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                         eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                while teszt!="i" and teszt!="n":
+                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
                     for elem in L:
@@ -1098,7 +1136,7 @@ while ujra=="i":
                         else:
                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-            if igen6==2:
+            if igen6=="2":
                 class gnu:
                     def __init__(self,cim,szoveg,kerdes,valasz):
                         self.cim=cim
@@ -1120,6 +1158,8 @@ while ujra=="i":
                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                         eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                while teszt!="i" and teszt!="n":
+                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
                     for elem in L:
@@ -1131,7 +1171,7 @@ while ujra=="i":
                         else:
                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
-            if igen6==3:
+            if igen6=="3":
                 class gombhal:
                     def __init__(self,cim,szoveg,kerdes,valasz):
                         self.cim=cim
@@ -1153,6 +1193,8 @@ while ujra=="i":
                         print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                         eleje=input('[NYomd meg az ENTERT]')
                 teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+                while teszt!="i" and teszt!="n":
+                    teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
                 if teszt=='i':
                     pont=0
                     for elem in L:
@@ -1239,6 +1281,8 @@ while ujra=="i":
                     print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                     eleje=input('[Nyomd meg az ENTERT]')
             teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
+            while teszt!="i" and teszt!="n":
+                teszt=input('Ki akarod tölteni a tesztet? [i/n] ')
             if teszt=='i':
                 pont=0
                 for elem in gyilo3:
