@@ -68,10 +68,10 @@ while ujra=="i":
     if nem=='1':
         igen=input('Melyik feladattípussal akarsz gyakorolni?\n\t1: Mondatösszerakás\n\t2: Szavak\n\t3: Mondatkiegészítés\n\t')
         if igen=='2':
-            melyik=input("Melyik témakört akarod gyakorolni? ")
+            melyik="1172"
             print("Írd le a megadott szavakat angolul!")
             print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
-            while melyik!="1" and melyik!="2" and melyik!="3" and melyik!="4" and melyik!="5" and melyik=="":
+            while melyik!="1" and melyik!="2" and melyik!="3" and melyik!="4" and melyik!="5":
                 print("Írd le a megadott szavakat angolul!")
                 print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
                 melyik=input("Melyik témakört akarod gyakorolni? ")
@@ -173,13 +173,13 @@ while ujra=="i":
                             print("A válasz hibás, a helyes válasz: ",elem.angol)
                     print("Pontjaid: {}/20".format(pont))
                 else:
-                    while melyik!=1 or melyik!=2 or melyik!=3 or melyik!=4 or melyik!=5:
+                    while melyik!="1" or melyik!="2" or melyik!="3" or melyik!="4" or melyik!="5":
                         melyik=input("Ez a szám nem jelöl meg egy témakört sem!\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? ")
                 meg=input("Szeretnél még szavakat gyakorolni? [i/n] ")
                 while meg!="i" and meg!="n":
                     meg=input("Szeretnél még szavakat gyakorolni? [i/n] ")
                 if meg=="i":
-                    melyik=int(input("\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? "))
+                    melyik=(input("\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? "))
         elif igen=='1':
             egesz=[]
             mon=[]
