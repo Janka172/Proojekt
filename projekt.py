@@ -82,7 +82,6 @@ while ujra=="i":
                     print("Témajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok")
                     melyik=input("Melyik témakört akarod gyakorolni? ")
                 if melyik=="1":
-                    pont=0
                     f=open("fajlok/lo.txt","r",encoding="utf-8")
                     L1=[]
                     for sor in f:
@@ -90,87 +89,153 @@ while ujra=="i":
                         d=sor.split(" ")
                         obj=loszo(d[0],d[1])
                         L1.append(obj)
-                    f.close
-                    for elem in L1:
-                        valasz=input("{} : ".format(elem.magyar))
-                        if valasz==elem.angol:
-                            print("A válasz helyes.")
-                            pont+=1
-                        else:
-                            print("A válasz hibás, a helyes válasz: ",elem.angol)
-                    print("Pontjaid: {}/20".format(pont))
+                        f.close
+                    igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    while igen172!="1" and igen172!="2":
+                        igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    if igen172=="1":
+                        for elem in L1:
+                            print("{} : {}".format(elem.magyar,elem.angol))
+                        teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        while teszte!="i" and teszte!="n":
+                            teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        if teszte=="i":
+                            igen172="2"
+                    if igen172=="2":
+                        pont=0
+                        for elem in L1:
+                            valasz=input("{} : ".format(elem.magyar))
+                            if valasz==elem.angol:
+                                print("A válasz helyes.")
+                                pont+=1
+                            else:
+                                print("A válasz hibás, a helyes válasz: ",elem.angol)
+                        print("Pontjaid: {}/20".format(pont))
                 elif melyik=="2":
-                    pont=0
                     f=open("fajlok/etel.txt","r",encoding="utf-8")
-                    L1=[]
+                    L2=[]
                     for sor in f:
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=etelszo(d[0],d[1])
                         L1.append(obj)
                     f.close
-                    for elem in L1:
-                        valasz=input("{} : ".format(elem.magyar))
-                        if valasz==elem.angol:
-                            print("A válasz helyes.")
-                            pont+=1
-                        else:
-                            print("A válasz hibás, a helyes válasz: ",elem.angol)
-                    print("Pontjaid: {}/20".format(pont))
+                    igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    while igen173!="1" and igen173!="2":
+                        igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    if igen173=="1":
+                        for elem in L2:
+                            print("{} : {}".format(elem.magyar,elem.angol))
+                        teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        while teszte!="i" and teszte!="n":
+                            teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        if teszte=="i":
+                            igen173="2"
+                    if igen173=="2":
+                        pont=0
+                        f.close
+                        for elem in L2:
+                            valasz=input("{} : ".format(elem.magyar))
+                            if valasz==elem.angol:
+                                print("A válasz helyes.")
+                                pont+=1
+                            else:
+                                print("A válasz hibás, a helyes válasz: ",elem.angol)
+                        print("Pontjaid: {}/20".format(pont))
                 elif melyik=="3":
-                    pont=0
                     f=open("fajlok/ruha.txt","r",encoding="utf-8")
-                    L1=[]
+                    L3=[]
                     for sor in f:
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=ruhaszo(d[0],d[1])
                         L1.append(obj)
                     f.close
-                    for elem in L1:
-                        valasz=input("{} : ".format(elem.magyar))
-                        if valasz==elem.angol:
-                            print("A válasz helyes.")
-                            pont+=1
-                        else:
-                            print("A válasz hibás, a helyes válasz: ",elem.angol)
-                    print("Pontjaid: {}/20".format(pont))
+                    igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    while igen174!="1" and igen174!="2":
+                        igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    if igen174=="1":
+                        f=open("fajlok/ruha.txt","r",encoding="utf-8")
+                        for elem in L3:
+                            print("{} : {}".format(elem.magyar,elem.angol))
+                        teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        while teszte!="i" and teszte!="n":
+                            teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        if teszte=="i":
+                            igen174="2"
+                    if igen174=="2":
+                        pont=0
+                        for elem in L3:
+                            valasz=input("{} : ".format(elem.magyar))
+                            if valasz==elem.angol:
+                                print("A válasz helyes.")
+                                pont+=1
+                            else:
+                                print("A válasz hibás, a helyes válasz: ",elem.angol)
+                        print("Pontjaid: {}/20".format(pont))
                 elif melyik=="4":
-                    pont=0
                     f=open("fajlok/butor.txt","r",encoding="utf-8")
-                    L1=[]
+                    L4=[]
                     for sor in f:
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=butorszo(d[0],d[1])
                         L1.append(obj)
                     f.close
-                    for elem in L1:
-                        valasz=input("{} : ".format(elem.magyar))
-                        if valasz==elem.angol:
-                            print("A válasz helyes.")
-                            pont+=1
-                        else:
-                            print("A válasz hibás, a helyes válasz: ",elem.angol)
-                    print("Pontjaid: {}/20".format(pont))
+                    igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    while igen175!="1" and igen175!="2":
+                        igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    if igen175=="1":
+                        for elem in L4:
+                            print("{} : {}".format(elem.magyar,elem.angol))
+                        teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        while teszte!="i" and teszte!="n":
+                            teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        if teszte=="i":
+                            igen175="2"
+                    if igen175=="2":
+                        pont=0
+                        for elem in L4:
+                            valasz=input("{} : ".format(elem.magyar))
+                            if valasz==elem.angol:
+                                print("A válasz helyes.")
+                                pont+=1
+                            else:
+                                print("A válasz hibás, a helyes válasz: ",elem.angol)
+                        print("Pontjaid: {}/20".format(pont))
                 elif melyik=="5":
-                    pont=0
                     f=open("fajlok/allat.txt","r",encoding="utf-8")
-                    L1=[]
+                    L5=[]
                     for sor in f:
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=allatszo(d[0],d[1])
                         L1.append(obj)
                     f.close
-                    for elem in L1:
-                        valasz=input("{} : ".format(elem.magyar))
-                        if valasz==elem.angol:
-                            print("A válasz helyes.")
-                            pont+=1
-                        else:
-                            print("A válasz hibás, a helyes válasz: ",elem.angol)
-                    print("Pontjaid: {}/20".format(pont))
+
+                    igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    while igen176!="1" and igen176!="2":
+                        igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    
+                    if igen176=="1":
+                        for elem in L5:
+                            print("{} : {}".format(elem.magyar,elem.angol))
+                        teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        while teszte!="i" and teszte!="n":
+                            teszte=input("Kitöltöd a tesztet? [i/n] ")
+                        if teszte=="i":
+                            igen176="2"
+                    if igen176=="2":
+                        pont=0
+                        
+                        for elem in L5:
+                            valasz=input("{} : ".format(elem.magyar))
+                            if valasz==elem.angol:
+                                print("A válasz helyes.")
+                                pont+=1
+                            else:
+                                print("A válasz hibás, a helyes válasz: ",elem.angol)
+                        print("Pontjaid: {}/20".format(pont))
                 else:
                     while melyik!="1" or melyik!="2" or melyik!="3" or melyik!="4" or melyik!="5":
                         melyik=input("Ez a szám nem jelöl meg egy témakört sem!\nTémajörök:\n\t1: Lovak\n\t2: Ételek\n\t3: Ruhák\n\t4: Bútorok\n\t5: Állatok\nMelyik témakört akarod gyakorolni? ")
