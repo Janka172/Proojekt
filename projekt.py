@@ -27,8 +27,7 @@ class mondat:
         self.harmadik=harmadik
         self.negyedik=negyedik
 def mennyirejo(a):
-                if a>=3: return 'Nagyon ügyes voltál'
-                if a==2: return 'Egy kicsi gyakorlással még jobban fog menni'
+                if a>1: return 'Ügyes voltál'
                 if a<1: return 'Vannak gondok...'
 
 a="""
@@ -1097,7 +1096,7 @@ while ujra=="i":
                             print("A válasz hibás, a helyes válasz: {}\n".format(elem.valasz))
                     print("\nPontjaid: {}/4, {}".format(pont,mennyirejo(pont)))
         elif tipus=="2":
-            igen6=int(input("Melyik állatfajól szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
+            igen6=(input("Melyik állatfajól szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t"))
             while igen6!="1" and igen6!="2" and igen6!="3":
                 igen6=input("Melyik állatjaról szeretnél tanulni?\n\t1: Nílusi víziló\n\t2: Gnú\n\t3: Gömbhal\n\t")
             if igen6=="1":
@@ -1261,6 +1260,8 @@ while ujra=="i":
                 print('[ENTER] billentyűt kell megnyomnod! Különben nem fog tovább menni a szöveg.')
                 eleje=input('[Nyomd meg az ENTERT]')
         teszt=input('Ki akarod tölteni a tesztet vagy tovább kutakodsz a témában? [teszt/tovább] ')
+        while teszt!="teszt" and teszt!="tovább":
+            teszt=input('Ki akarod tölteni a tesztet vagy tovább kutakodsz a témában? [teszt/tovább] ')
         if teszt=='teszt':
             pont=0
             for x in range(3):
@@ -1307,7 +1308,6 @@ a='''
 ╰╯╰━┻━━┻━━┻━━━┻┻━┻━━┻━╯╰━┻━━┻╯
 '''
 b='''
-
 ╱╱╭╮╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━━━━╮╱╱╱╱╱╱╱╱╱╱╱╭╮╱╭╮╱╱╱╱╱╱╱╱╱╱╱╭━━━╮╱╱╱╱╱╱╱╱╭╮
 ╱╱┃┃╱╱╱╱╱┃┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╮━┃╱╱╱╱╱╱╱╱╱╱╭╯╰┳╯╰╮╱╱╱╱╱╱╱╱╱╱╰╮╭╮┃╱╱╱╱╱╱╱╭╯╰╮
 ╱╱┃┣━━┳━╮┃┃╭┳━━╮╱╱╱╱╱╱╱╱╱╱╱╱╭╯╭╋━━┳━━┳━╮╭━┻╮╭┻╮╭╯╱╱╱╱╱╱╱╱╱╱╱┃┃┃┣━━┳━╮╭━┻╮╭╯
