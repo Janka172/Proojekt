@@ -118,7 +118,7 @@ while ujra=="i":
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=etelszo(d[0],d[1])
-                        L1.append(obj)
+                        L2.append(obj)
                     f.close
                     igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
                     while igen173!="1" and igen173!="2":
@@ -149,7 +149,7 @@ while ujra=="i":
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=ruhaszo(d[0],d[1])
-                        L1.append(obj)
+                        L3.append(obj)
                     f.close
                     igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
                     while igen174!="1" and igen174!="2":
@@ -180,7 +180,7 @@ while ujra=="i":
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=butorszo(d[0],d[1])
-                        L1.append(obj)
+                        L4.append(obj)
                     f.close
                     igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
                     while igen175!="1" and igen175!="2":
@@ -210,7 +210,7 @@ while ujra=="i":
                         sor=sor.replace("\n","")
                         d=sor.split(" ")
                         obj=allatszo(d[0],d[1])
-                        L1.append(obj)
+                        L5.append(obj)
                     f.close
 
                     igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
