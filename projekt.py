@@ -1,4 +1,5 @@
 import random
+import os
 
 class loszo:
     def __init__(self,magyar,angol):
@@ -90,9 +91,9 @@ while ujra=="i":
                         obj=loszo(d[0],d[1])
                         L1.append(obj)
                         f.close
-                    igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     while igen172!="1" and igen172!="2":
-                        igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                        igen172=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     if igen172=="1":
                         for elem in L1:
                             print("{} : {}".format(elem.magyar,elem.angol))
@@ -101,6 +102,7 @@ while ujra=="i":
                             teszte=input("Kitöltöd a tesztet? [i/n] ")
                         if teszte=="i":
                             igen172="2"
+                            print("\n"*100)
                     if igen172=="2":
                         pont=0
                         for elem in L1:
@@ -120,9 +122,9 @@ while ujra=="i":
                         obj=etelszo(d[0],d[1])
                         L2.append(obj)
                     f.close
-                    igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     while igen173!="1" and igen173!="2":
-                        igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                        igen173=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     if igen173=="1":
                         for elem in L2:
                             print("{} : {}".format(elem.magyar,elem.angol))
@@ -131,6 +133,7 @@ while ujra=="i":
                             teszte=input("Kitöltöd a tesztet? [i/n] ")
                         if teszte=="i":
                             igen173="2"
+                            print("\n"*100)
                     if igen173=="2":
                         pont=0
                         f.close
@@ -151,9 +154,9 @@ while ujra=="i":
                         obj=ruhaszo(d[0],d[1])
                         L3.append(obj)
                     f.close
-                    igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     while igen174!="1" and igen174!="2":
-                        igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                        igen174=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     if igen174=="1":
                         f=open("fajlok/ruha.txt","r",encoding="utf-8")
                         for elem in L3:
@@ -163,6 +166,7 @@ while ujra=="i":
                             teszte=input("Kitöltöd a tesztet? [i/n] ")
                         if teszte=="i":
                             igen174="2"
+                            print("\n"*100)
                     if igen174=="2":
                         pont=0
                         for elem in L3:
@@ -182,9 +186,9 @@ while ujra=="i":
                         obj=butorszo(d[0],d[1])
                         L4.append(obj)
                     f.close
-                    igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     while igen175!="1" and igen175!="2":
-                        igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                        igen175=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     if igen175=="1":
                         for elem in L4:
                             print("{} : {}".format(elem.magyar,elem.angol))
@@ -193,6 +197,7 @@ while ujra=="i":
                             teszte=input("Kitöltöd a tesztet? [i/n] ")
                         if teszte=="i":
                             igen175="2"
+                            print("\n"*100)
                     if igen175=="2":
                         pont=0
                         for elem in L4:
@@ -213,9 +218,9 @@ while ujra=="i":
                         L5.append(obj)
                     f.close
 
-                    igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                    igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     while igen176!="1" and igen176!="2":
-                        igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet ?\n\t")
+                        igen176=input("\t1: Átnézed a szavakat\n\t2: Kitöltöd a tesztet\n\t")
                     
                     if igen176=="1":
                         for elem in L5:
@@ -225,6 +230,7 @@ while ujra=="i":
                             teszte=input("Kitöltöd a tesztet? [i/n] ")
                         if teszte=="i":
                             igen176="2"
+                            print("\n"*100)
                     if igen176=="2":
                         pont=0
                         
